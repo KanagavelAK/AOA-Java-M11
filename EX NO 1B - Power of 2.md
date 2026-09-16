@@ -1,68 +1,61 @@
-# **EX 1B Power of 2**
+# EX 1B Power of 2
+## AIM:
+To write a Java program to for given constraints.Given an integer n, return true if it is a power of two. Otherwise, return false.
+An integer n is a power of two, if there exists an integer x such that n == 2x.
 
-## **DATE: 17-07-2026**
+## Algorithm
+1.Start the program.
 
-## **AIM:**
+2.Input an integer n from the user.
 
-To write a Java program that checks whether a given integer **n** is a power of two.
-An integer **n** is a power of two if there exists an integer **x** such that:
-**n = 2ˣ**.
+3.Check if n is less than or equal to 0:
 
----
+If yes, display false and stop (since negative numbers and 0 are not powers of two).
 
-## **Algorithm**
+4.Use bitwise operation:
 
-1. Start the program.
-2. Read the integer value **n** from the user.
-3. If **n ≤ 0**, return false (because powers of 2 are always positive).
-4. Use a loop to check whether **n** becomes 1 when repeatedly divided by 2.
-5. If n becomes 1, display **true**; otherwise display **false**.
+Compute (n & (n - 1)).
 
----
+If the result is 0, then n is a power of two; otherwise, it is not.
 
-## **Program:**
+5.Display the result (true or false) and stop the program.
+  
 
-```JAVA
+## Program:
+```
 /*
-Program to check if a number is a Power of 2
+Program to implement Reverse a String
 Developed by: Kanagavel A K
-Register Number: 212223230096
+Register Number:  212223230096
 */
-import java.util.*;
 
-public class Main{
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        boolean result = true;
-        
-        if(n <= 0)
-            result = false;
-        else{
-            while(n > 1){
-                if(n % 2 != 0){
-                    result = false;
-                    break;
-                }
-                n = n / 2;
-            }
-        }
-        
+import java.util.Scanner;
+
+public class Solution {
+
+    public boolean isPowerOfTwo(int n) {
+     if(n<=0)
+     return false;
+     else
+     return (n&(n-1))==0;     
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Solution sol = new Solution();
+        int n = scanner.nextInt();
+        boolean result = sol.isPowerOfTwo(n);
         System.out.println(result);
+
+        scanner.close();
     }
 }
+
 ```
 
----
+## Output:
+<img width="403" height="198" alt="image" src="https://github.com/user-attachments/assets/5ad4dd66-64a4-4aff-b00d-a9d51f790f20" />
 
-## **Output:**
 
-<img width="1264" height="242" alt="image" src="https://github.com/user-attachments/assets/9ead7ad4-b02e-405e-9e35-b2f149fa3e67" />
 
----
-
-## **Result:**
-
-The program was successfully implemented and the expected output was verified.
-
----
+## Result:
+The program successfully implemented and the expected output is verified.
