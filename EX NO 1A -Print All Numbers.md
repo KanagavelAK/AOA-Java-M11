@@ -1,58 +1,60 @@
-# **EX 1A Print All Numbers**
+# EX 1A Print All Numbers 
+## AIM:
+To Write a Java program that takes an integer input N from the user and prints all the numbers from 1 to N, separated by spaces, on a single line..
 
-## **DATE: 16-07-2026**
+## Algorithm
+1.Start the program.
 
-## **AIM:**
+2.Input an integer N from the user.
 
-To write a Java program that takes an integer input N from the user and prints all the numbers from 1 to N, separated by spaces, on a single line.
+3.Check condition:
+If N <= 0, display "Invalid input. N must be greater than 0." and stop.
 
----
+4.Initialize a variable i = 1.
 
-## **Algorithm**
+5.Use a loop to print numbers from 1 to N:
 
-1. Start the program.
-2. Read the integer value N from the user.
-3. Check whether N is greater than 0.
-4. If N > 0, use a loop to print numbers from 1 to N.
-5. Stop the program.
+While i <= N, print i followed by a space.
 
----
+Increment i by 1.
 
-## **Program:**
+End loop and stop the program. 
+ 
 
-```java
+## Program:
+```
 /*
-Program to implement Print All Numbers from 1 to N
+Program to implement Reverse a String
 Developed by: Kanagavel A K
-Register Number: 212223230096
+Register Number:  212223230096
 */
-import java.util.*;
 
-public class Main{
-    public static void main(String[] args){
+import java.util.*; 
+public class demo   
+{
+    public static void main(String args[]) 
+    {
+        int N,i;
         Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        if(n<=0)
+        N=sc.nextInt();  
+        if(N<=0)
+        {
             System.out.println("Invalid input. N must be greater than 0.");
+            
+        }
         else{
-            for(int i=1;i<=n;i++){
-                System.out.print(i+" ");
+            for(i=1;i<=N;i++){
+                System.out.print(i+" ");    
             }
         }
     }
 }
 ```
 
----
+## Output:
+<img width="425" height="152" alt="image" src="https://github.com/user-attachments/assets/54163f54-8ab1-4383-ad7b-35428ac584b3" />
 
-## **Output:**
 
-<img width="1023" height="203" alt="image" src="https://github.com/user-attachments/assets/8d92cb0d-4969-4def-9f4f-27b00df274ab" />
 
----
-
-## **Result:**
-
-The program successfully prints all the numbers from 1 to N.
-
----
+## Result:
+The program successfully print all the numbers from 1 to N. 
